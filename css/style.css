@@ -174,15 +174,19 @@ a:hover {
 table {
     width: 100%;
     table-layout: fixed;
+    
 }
 
 th {
     border-left: 1px dashed white;
     border-collapse: collapse;
+    vertical-align: middle;
+    text-align: left;
 }
 
 th, td {
     padding: 10px;
+    vertical-align: middle;
 }
 
 table tr:nth-child(even){
