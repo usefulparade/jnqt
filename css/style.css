@@ -70,7 +70,7 @@ a:hover {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 100vw;
+    width: 500vw;
     height: 100vh;
     background-image: linear-gradient(to bottom, rgb(255, 166, 57), rgb(194, 105, 245), rgb(245, 217, 105));
 }
