@@ -28,7 +28,7 @@
     }
 
     .date-block {
-        top: 120px;
+        top: 60px;
         left: 10px;
     }
 }
@@ -59,7 +59,7 @@
         border-right: 12px solid black;
     }
     .date-block {
-        top: 120px;
+        top: 60px;
         left: -15px;
     }
 }
@@ -90,6 +90,7 @@ h1 {
     padding-bottom: 8px;
     margin: 0px;
     font-size: 52px;
+    letter-spacing: 10px;
 }
 
 h2 {
