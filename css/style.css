@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Crimson+Text:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Crimson+Text');
 
 
 
@@ -36,14 +36,15 @@ h1 {
 
 h2 {
     font-family: 'Crimson Text', serif;
+    line-height: 1em;
     text-align: center;
     padding: 12px;
     margin: 0px;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 h3 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Georgia', serif;
     text-align: center;
     padding: 12px;
     margin: 0px;
@@ -123,8 +124,7 @@ a:hover {
 .main-title {
     color: rgb(255, 243, 233);
     background-color: rgb(40, 174, 198);
-    /* min-height: 100%; */
-    height: auto;
+    min-height: 5px;
 }
 
 .transition-l-to-r {
