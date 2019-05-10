@@ -20,6 +20,7 @@ function init (){
 
 function populateContent(sheet){
     console.log(sheet);
+    var archiveBlock = document.getElementById('archive');
 
     var allYears = sheet.map(function (item){
         return item.Year;
@@ -27,6 +28,21 @@ function populateContent(sheet){
     var uniqueYears = allYears.filter(function(item, index){
         return allYears.indexOf(item) >= index;
     });
+
+    firstBlock = createDiv().addClass('pull-right');
+    firstTransition = createDiv().addClass('transition-r-to-l');
+    firstBlock.parent(archiveBlock);
+    firstTransition.parent(archiveBlock);
+
+    titleBlock = createDiv().addClass('pull-left main-title');
+    titleH1 = createElement('h1', '~JNQT~');
+    titleH2 = createElement('h2', "Hi, I'm Jesse! I'm a drummer, composer, and competitive Magic player. This is an archive / portfolio of my work.");
+    titleH1.parent(titleBlock);
+    titleH2.parent(titleBlock);
+    titleBlock.parent(archiveBlock);
+
+    secondTransition = createDiv().addClass('transition-l-to-r');
+    secondTransition.parent(archiveBlock);
 
     for (i=0;i<uniqueYears.length;i++){
         if (i%2==0){
