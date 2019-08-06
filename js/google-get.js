@@ -13,7 +13,7 @@ function init (){
                     populateContent(data);
                     //    archive = loadJSON(data);
                    },
-                   simpleSheet: true } )
+                   simpleSheet: true } );
 
 }
 
@@ -36,7 +36,7 @@ function populateContent(sheet){
 
     titleBlock = createDiv().addClass('pull-left main-title');
     titleH1 = createElement('h1', '~JNQT~');
-    titleH2 = createElement('h2', "Hi, I'm Jesse! I'm a drummer, composer, and competitive Magic player. This is an archive / portfolio of my work.");
+    titleH2 = createElement('h2', "Hi! I'm Jesse, I play drums and write music!<br>This is an archive and portfolio of those things.");
     titleH1.parent(titleBlock);
     titleH2.parent(titleBlock);
     titleBlock.parent(archiveBlock);
