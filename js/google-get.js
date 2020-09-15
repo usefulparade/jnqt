@@ -36,7 +36,7 @@ function populateContent(sheet){
 
     titleBlock = createDiv().addClass('pull-left main-title');
     titleH1 = createElement('h1', 'jnqt');
-    titleH2 = createElement('h2', "my friends, music, etc.");
+    titleH2 = createElement('h2', "my music and my friends");
     titleH1.parent(titleBlock);
     titleH2.parent(titleBlock);
     titleBlock.parent(archiveBlock);
