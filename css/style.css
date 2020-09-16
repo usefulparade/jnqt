@@ -13,7 +13,7 @@ body {
 }
 
 p {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Georgia', serif;
     text-align: left;
     /* padding-top: 24px;
     padding-bottom: 24px;
@@ -24,7 +24,7 @@ p {
 }
 
 h1 {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Georgia', sans-serif;
     font-weight: 700;
     text-align: center;
     padding-top: 12px;
