@@ -81,7 +81,8 @@ a:hover {
     margin-right: auto;
     margin-top: -100px;
     max-width: 768px;
-    transform: rotate(-3deg);
+    /*changed rotate from -3 to - 1.75*/
+    transform: rotate(-1.75deg);
 }
 
 .pull-left {
@@ -246,7 +247,7 @@ table tr:nth-child(even){
         width: 404px;
         margin-left: 26px;
         -ms-transform: skewX(-47deg); /* IE 9 */
-        -webkit-transform: skewX(-47deg); /* Safari */
+        -webkit-transform: skewX(-947deg); /* Safari */
         transform: skewX(-47deg);
         border-left: 12px solid black;
         border-right: 12px solid black;
