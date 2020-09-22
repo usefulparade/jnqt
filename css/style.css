@@ -229,6 +229,7 @@ table tr:nth-child(even){
 @media only screen and (max-width: 767px){
     .main-column{
         width: 480px;
+        transform: rotate(0deg);
     }
     .svg-container{
         width: 768px;
