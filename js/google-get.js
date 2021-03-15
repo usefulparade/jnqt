@@ -106,5 +106,8 @@ function populateContent(sheet){
             // newP = createP(sheet[i].Date + " — " + sheet[i].Description);
             // newP.parent(document.getElementById(sheet[i].Year));
     }
+
+    var column = document.getElementById("column");
+    column.classList.add("column-unfurl");
 }
 

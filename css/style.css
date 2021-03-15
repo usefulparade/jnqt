@@ -77,12 +77,20 @@ a:hover {
 
 .main-column {
     display: block;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-top: -100px;
     max-width: 768px;
     /*changed rotate from -3 to - 1.75*/
-    transform: rotate(-1.75deg);
+    /* transform is now handled by the animation */
+    /* transform: rotate(-1.75deg); */
+    
+}
+
+/* this class gets added after the page is populated in google-get.js */
+.column-unfurl {
+    animation: unfurl 2s ease-out forwards;
 }
 
 .pull-left {
@@ -257,4 +265,17 @@ table tr:nth-child(even){
         top: 60px;
         left: -28px;
     }
+}
+
+/* playing with an animate-in kind of thing */
+@keyframes unfurl {
+    0%  {   transform: rotate(-1.75deg)  translateY(-3000px);
+            opacity: 0%;
+        }
+    20% {
+            opacity: 100%;  
+        }
+    100%{  transform: rotate(-1.75deg) translateY(0px);
+            
+        }
 }
