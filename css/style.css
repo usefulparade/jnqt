@@ -265,6 +265,10 @@ table tr:nth-child(even){
         top: 60px;
         left: -28px;
     }
+
+    .column-unfurl {
+        animation: unfurlmobile 2s ease-out forwards;
+    }
 }
 
 /* playing with an animate-in kind of thing */
@@ -276,6 +280,18 @@ table tr:nth-child(even){
             opacity: 100%;  
         }
     100%{  transform: rotate(-1.75deg) translateY(0px);
+            
+        }
+}
+
+@keyframes unfurlmobile {
+    0%  {   transform: rotate(0deg)  translateY(-3000px);
+            opacity: 0%;
+        }
+    20% {
+            opacity: 100%;  
+        }
+    100%{  transform: rotate(0deg) translateY(0px);
             
         }
 }
