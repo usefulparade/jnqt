@@ -36,7 +36,7 @@ function populateContent(sheet){
 
     titleBlock = createDiv().addClass('pull-left main-title');
     titleH1 = createElement('h1', 'JNQT');
-    titleH2 = createElement('h2', "an incomplete archive of recordings and performances");
+    titleH2 = createElement('h2', "an incomplete archive of Jesse Quebbeman-Turley's recordings and performances");
     titleH1.parent(titleBlock);
     titleH2.parent(titleBlock);
     titleBlock.parent(archiveBlock);
