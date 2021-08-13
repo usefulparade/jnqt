@@ -1,10 +1,21 @@
-var spreadsheetURL = "https://docs.google.com/spreadsheets/d/13e_i5KqbVlkiy8TYflBQTi_KZAYlboq-NiTY7sLbxNY/edit?usp=sharing";
+// var spreadsheetURL = "https://docs.google.com/spreadsheets/d/13e_i5KqbVlkiy8TYflBQTi_KZAYlboq-NiTY7sLbxNY/edit?usp=sharing";
+var spreadsheetURL = "/archive.csv";
+var archive, archiveArray;
 
-function setup(){
-    init();
+function preload(){
+    archive = loadTable("/archive.csv", "csv", "header");
 }
 
-function init (){
+function setup(){
+    // init();  // NOT ANYMORE
+    archiveArray = archive.getObject();
+    console.log(archiveArray);
+    populateContent(archiveArray);
+}
+
+
+
+function init (){ // This was the old way of getting data from google sheets :( RIP
     Tabletop.init( { key: spreadsheetURL,
                    callback: function(data, tabletop) { 
                        
@@ -19,15 +30,20 @@ function init (){
 
 
 function populateContent(sheet){
-    console.log(sheet);
     var archiveBlock = document.getElementById('archive');
 
-    var allYears = sheet.map(function (item){
-        return item.Year;
-    });
+
+    var allYears = [];
+
+    for (var j=0;j<Object.keys(sheet).length;j++){
+        allYears[j] = sheet[j].Year;
+    }
+
     var uniqueYears = allYears.filter(function(item, index){
         return allYears.indexOf(item) >= index;
     });
+
+    console.log(allYears);
 
     firstBlock = createDiv().addClass('pull-right');
     firstTransition = createDiv().addClass('transition-r-to-l');
@@ -84,7 +100,7 @@ function populateContent(sheet){
     usefulParade.parent(endCard);
     endCard.parent(document.getElementById('archive'));
 
-    for (i=0;i<sheet.length;i++){
+    for (i=0;i<Object.keys(sheet).length;i++){
             var newTable = createElement('tr');
             var columns = [];
             columns[0] = createElement('th', sheet[i].Date);
@@ -103,8 +119,6 @@ function populateContent(sheet){
             }
 
             newTable.parent(document.getElementById(sheet[i].Year));
-            // newP = createP(sheet[i].Date + " — " + sheet[i].Description);
-            // newP.parent(document.getElementById(sheet[i].Year));
     }
 
     var column = document.getElementById("column");
