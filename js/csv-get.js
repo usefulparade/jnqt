@@ -98,6 +98,8 @@ function populateContent(sheet){
     }
     usefulParade = createA('https://www.usefulparade.com', 'a Useful Parade site');
     usefulParade.parent(endCard);
+    const infoText = createP('contact: jessequebbeman@gmail.com');
+    infoText.parent(endCard);
     endCard.parent(document.getElementById('archive'));
 
     for (i=0;i<Object.keys(sheet).length;i++){
