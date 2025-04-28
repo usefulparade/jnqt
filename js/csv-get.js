@@ -53,8 +53,11 @@ function populateContent(sheet){
     titleBlock = createDiv().addClass('pull-left main-title');
     titleH1 = createElement('h1', 'JNQT');
     titleH2 = createElement('h2', "an incomplete archive of Jesse Quebbeman-Turley's recordings and performances");
+    titleH3 = createElement('h3', "contact: jessequebbeman@gmail.com");
+
     titleH1.parent(titleBlock);
     titleH2.parent(titleBlock);
+    titleH3.parent(titleBlock);
     titleBlock.parent(archiveBlock);
 
     secondTransition = createDiv().addClass('transition-l-to-r');
@@ -98,8 +101,6 @@ function populateContent(sheet){
     }
     usefulParade = createA('https://www.usefulparade.com', 'a Useful Parade site');
     usefulParade.parent(endCard);
-    const infoText = createP('contact: jessequebbeman@gmail.com');
-    infoText.parent(endCard);
     endCard.parent(document.getElementById('archive'));
 
     for (i=0;i<Object.keys(sheet).length;i++){
