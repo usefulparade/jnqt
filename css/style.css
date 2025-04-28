@@ -44,12 +44,12 @@ h2 {
 }
 
 h3 {
-    font-family: 'Georgia', serif;
+    font-family: 'Crimson Text', serif;
+    line-height: 1em;
     text-align: center;
     padding: 12px;
     margin: 0px;
-    font-size: 1.5em;
-    color: black;
+    font-size: .8em;
 }
 
 a {
